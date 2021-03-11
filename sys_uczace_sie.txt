@@ -1,0 +1,7 @@
+### importowanie tabeli
+import os
+os.chdir(r"C:\Users\user\Desktop\asia studiuje\II SEM\SYST UCZĄCE SIĘ\2021_02_23\testGielda")
+
+dane_otworz=open("gielda.txt", "r")
+dane_plik=dane_otworz.readlines()
+dane=[[] for i in range(len(dane_plik))]
