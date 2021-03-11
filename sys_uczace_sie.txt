@@ -1,6 +1,6 @@
 ### importowanie tabeli
-import os
-os.chdir(r"C:\Users\user\Desktop\asia studiuje\II SEM\SYST UCZĄCE SIĘ\2021_02_23\testGielda")
+#import os
+#os.chdir(r"C:\Users\user\Desktop\asia studiuje\II SEM\SYST UCZĄCE SIĘ\2021_02_23\testGielda")
 
 dane_otworz=open("gielda.txt", "r")
 dane_plik=dane_otworz.readlines()
@@ -16,6 +16,7 @@ for i in range(len(dane_plik)):
 
 
 print(dane)
+print()
 dane_otworz.close()
 ### słownik - wartosci poszczegolnych atrybutow
 atrybuty={}
@@ -24,6 +25,7 @@ for i in range(len(dane[0])):
     atrybuty["a" + str(i+1)]=[]
     for j in range(len(dane)):
       atrybuty["a" + str(i+1)].append(dane[j][i])
+
 print(atrybuty)
 ### słownik - ile roznych wartosci przyjmuja atrybuty
 atrybuty_ile={}
@@ -31,5 +33,6 @@ atrybuty_ile={}
 for i in atrybuty.keys():
 
    atrybuty_ile[i]=len(set(atrybuty[i]))
+
 
 print(atrybuty_ile)
