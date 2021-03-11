@@ -24,3 +24,12 @@ for i in range(len(dane[0])):
     atrybuty["a" + str(i+1)]=[]
     for j in range(len(dane)):
       atrybuty["a" + str(i+1)].append(dane[j][i])
+
+### słownik - ile roznych wartosci przyjmuja atrybuty
+atribute_count{}
+
+for i in atrybuty.keys():
+
+   atribute_count[i]=len(set(atrybuty[i]))
+
+print(atrybuty_ile)
