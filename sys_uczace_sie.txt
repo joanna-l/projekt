@@ -5,3 +5,22 @@ os.chdir(r"C:\Users\user\Desktop\asia studiuje\II SEM\SYST UCZĄCE SIĘ\2021_02_
 dane_otworz=open("gielda.txt", "r")
 dane_plik=dane_otworz.readlines()
 dane=[[] for i in range(len(dane_plik))]
+
+for i in range(len(dane_plik)):
+    x=dane_plik[i].replace("\n", "").split(",")
+    for j in range(len(x)):
+        try:
+            dane[i].append(int(x[j]))
+        except:
+            dane[i].append(x[j])
+
+
+print(dane)
+dane_otworz.close()
+### słownik - wartosci poszczegolnych atrybutow
+atrybuty={}
+
+for i in range(len(dane[0])):
+    atrybuty["a" + str(i+1)]=[]
+    for j in range(len(dane)):
+      atrybuty["a" + str(i+1)].append(dane[j][i])
